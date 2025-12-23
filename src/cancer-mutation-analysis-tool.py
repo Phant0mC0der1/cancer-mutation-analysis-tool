@@ -37,7 +37,7 @@ def data_filtering_and_visualisation(file,site):
     tp53.to_csv(f"C:/Users/dhash/Documents/Cross-Tissue Conservation of Tumor Supressor Mutation Hotspots/filtered_data/{site}_data_filtered.csv")
 
 sites = []
-while True:
+while True: # Takes in relevant cancer sites through iteration
     site = input("Enter the cancer site:  ").lower()
     sites.append(site)
     while True:
@@ -50,7 +50,7 @@ while True:
         break
 
 paths = []
-while True:
+while True: # Takes in complementary file paths through iteration
     path = input("Enter the coressponding file path:  ")
     paths.append(path)
     while True:
@@ -63,4 +63,4 @@ while True:
         break
 
 for i in range(0,len(sites)):
-    data_filtering_and_visualisation(paths[i],sites[i])
+    data_filtering_and_visualisation(paths[i],sites[i]) # runs the analysis function for each cancer site using coressponding file path
